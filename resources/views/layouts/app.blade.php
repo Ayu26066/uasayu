@@ -61,7 +61,10 @@
                 <a class="nav-link" href="{{ route('transactions.index') }}">Transaksi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                @csrf
+                <button type="submit" class="btn btn-link nav-link" style="color: #333; text-decoration: none;">Logout</button>
+            </form>
             </li>
         </ul>
     </div>
